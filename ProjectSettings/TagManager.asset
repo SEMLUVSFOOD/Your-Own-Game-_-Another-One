@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Floor
   - DoorPast
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX
@@ -42,4 +44,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player1
+    uniqueID: 1548472925
+    locked: 0
+  - name: background
+    uniqueID: 429150497
     locked: 0
