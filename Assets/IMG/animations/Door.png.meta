@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 20adf25560edd4ed2b45878c2cafca11
+guid: c407cc0c012ce4261b89096db84d9b87
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -93,17 +93,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DoorSprite2-_0
+      name: 11_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 470.5
-        width: 315.5
-        height: 470.5
+        y: 1000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e90125a36cf5c46a9ae32546660e3875
-      internalID: -2037267533
+      spriteID: 62463b45d702444e0878f3303bc979a7
+      internalID: -893451720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSprite2-_1
+      name: 11_1
       rect:
         serializedVersion: 2
-        x: 315
-        y: 470.5
-        width: 315.5
-        height: 470.5
+        x: 1000
+        y: 1000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7644e40b5e9e646f9aac4c2689929a7a
-      internalID: -1011218245
+      spriteID: cefe4041573c74daea475265bee3c3ec
+      internalID: -989824908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSprite2-_2
+      name: 11_2
       rect:
         serializedVersion: 2
-        x: 630
-        y: 470.5
-        width: 315.5
-        height: 470.5
+        x: 2000
+        y: 1000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35a4e219e495e401f8ad533f0c7c75f3
-      internalID: -605175454
+      spriteID: ba08e56fd69964004a990064d14ea919
+      internalID: -717092613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSprite2-_3
+      name: 11_3
       rect:
         serializedVersion: 2
-        x: 945
-        y: 470.5
-        width: 315.5
-        height: 470.5
+        x: 3000
+        y: 1000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +187,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 321af0af73c1a4383a41aa6804dfbda1
-      internalID: 975911991
+      spriteID: 6638cb5185b764fe095ac09bce43b482
+      internalID: -266208390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSprite2-_4
+      name: 11_4
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1000
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727c3795e74264cdd9e8a9146974e3dc
+      internalID: -1568286406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 0.5
-        width: 315.5
-        height: 470.5
+        y: 0
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73400c2698be341cd83bae369a45d648
-      internalID: 2117780290
+      spriteID: 0ebcfc25c4018426286813069315115d
+      internalID: 717703071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSprite2-_5
+      name: 11_6
       rect:
         serializedVersion: 2
-        x: 315
-        y: 0.5
-        width: 315.5
-        height: 470.5
+        x: 1000
+        y: 0
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32918f50b09934eeb974fc38b25c3396
-      internalID: -1051217104
+      spriteID: 45fecdc3cff5a44b4a53776dede9e192
+      internalID: 80225810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSprite2-_6
+      name: 11_7
       rect:
         serializedVersion: 2
-        x: 630
-        y: 0.5
-        width: 315.5
-        height: 470.5
+        x: 2000
+        y: 0
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0c0954fdb5cb4d2fba54895cb5506cb
-      internalID: 539767565
+      spriteID: 93f5797b079a943b781b1dad985a883a
+      internalID: -1507715945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoorSprite2-_7
+      name: 11_8
       rect:
         serializedVersion: 2
-        x: 945
-        y: 0.5
-        width: 315.5
-        height: 470.5
+        x: 3000
+        y: 0
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,8 +292,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9477bfe2a863403b8c3fe701a6bf3c7
-      internalID: 996981880
+      spriteID: 3934bdebfa9884608bd2b794c065ee1b
+      internalID: -1822829108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11_9
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 0
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac277056251554699b26d121ff9c099d
+      internalID: -885748950
       vertices: []
       indices: 
       edges: []
@@ -275,14 +330,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DoorSprite2-_0: -2037267533
-      DoorSprite2-_1: -1011218245
-      DoorSprite2-_2: -605175454
-      DoorSprite2-_3: 975911991
-      DoorSprite2-_4: 2117780290
-      DoorSprite2-_5: -1051217104
-      DoorSprite2-_6: 539767565
-      DoorSprite2-_7: 996981880
+      11_0: -893451720
+      11_1: -989824908
+      11_2: -717092613
+      11_3: -266208390
+      11_4: -1568286406
+      11_5: 717703071
+      11_6: 80225810
+      11_7: -1507715945
+      11_8: -1822829108
+      11_9: -885748950
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
