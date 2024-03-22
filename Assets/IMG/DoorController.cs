@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
+
+    [SerializeField] private DoorController otherDoor;
+
     // Reference to the animator component controlling the door
     private Animator doorAnimator;
 
@@ -13,6 +16,9 @@ public class DoorController : MonoBehaviour
 
     // A flag to track whether the door has been opened
     private bool doorOpened = false;
+
+    private bool canOpen = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,16 +34,10 @@ public class DoorController : MonoBehaviour
     void Update()
     {
         // Check if the door is not already opened and if the player presses the 'Enter' key
-        if (!doorOpened && Input.GetKeyDown(KeyCode.Return))
+        if (canOpen && !doorOpened && Input.GetKeyDown(KeyCode.Return))
         {
-            // Set the "OpenDoor" bool parameter to true to trigger the door opening animation
-            doorAnimator.SetBool("OpenDoor", true);
-            
-            // Disable the collider to prevent further triggers
-            doorCollider.enabled = false;
-            
-            // Set the flag to indicate that the door has been opened
-            doorOpened = true;
+            otherDoor.OpenDoor();
+            OpenDoor();
         }
     }
 
@@ -48,8 +48,26 @@ public class DoorController : MonoBehaviour
         if (other.CompareTag("Player1") && !doorOpened)
         {
             // Prompt the player to press 'Enter' to open the door
+            canOpen = true;
             Debug.Log("Press 'Enter' to open the door.");
         }
+    }
+
+    void OnTriggerExit2D(Collider2D other) 
+    {
+        canOpen = false;
+    }
+
+    public void OpenDoor()
+    {
+        // Set the "OpenDoor" bool parameter to true to trigger the door opening animation
+        doorAnimator.SetBool("OpenDoor", true);
+        
+        // Disable the collider to prevent further triggers
+        doorCollider.enabled = false;
+        
+        // Set the flag to indicate that the door has been opened
+        doorOpened = true;
     }
 }
 
