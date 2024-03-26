@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveWASD : MonoBehaviour
 {
+    
    public float speed;
    public float jump;
 
@@ -50,7 +51,6 @@ public class MoveWASD : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Floor")) {
             isJumping = false;
-            Debug.Log("on floor");
         }
     }
 }
