@@ -42,7 +42,7 @@ public class LadderMovement : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject.CompareTag("Ladder")) {
-            rb.gravityScale = 2f;
+            rb.gravityScale = 5f;
             isLadder = false;
             isClimbing = false;
             Debug.Log("off ladder");

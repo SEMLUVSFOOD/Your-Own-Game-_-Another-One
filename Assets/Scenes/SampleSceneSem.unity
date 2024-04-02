@@ -3726,11 +3726,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7467069588952757716, guid: fb7792b6c868d48078297da96d5d1605, type: 3}
       propertyPath: jump
-      value: 1250
+      value: 1750
       objectReference: {fileID: 0}
     - target: {fileID: -3480387603519427116, guid: fb7792b6c868d48078297da96d5d1605, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4287308649196847255, guid: fb7792b6c868d48078297da96d5d1605, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4287308649196847255, guid: fb7792b6c868d48078297da96d5d1605, type: 3}
+      propertyPath: m_GravityScale
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4489604682189298511, guid: fb7792b6c868d48078297da96d5d1605, type: 3}
       propertyPath: m_SortingOrder
