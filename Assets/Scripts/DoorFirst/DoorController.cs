@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 
 public class DoorController : MonoBehaviour
 {
 
     [SerializeField] private DoorController otherDoor;
+
+    public TextMeshProUGUI popupText;
 
     // Reference to the animator component controlling the door
     private Animator doorAnimator;
@@ -15,10 +17,9 @@ public class DoorController : MonoBehaviour
     private Collider2D doorCollider;
 
     // A flag to track whether the door has been opened
-    private bool doorOpened = false;
+    public bool DoorOpened { get; private set; } = false;
 
     private bool canOpen = false;
-
 
     // Start is called before the first frame update
     void Start()
@@ -33,8 +34,17 @@ public class DoorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(canOpen && !DoorOpened && popupText != null)
+        {
+            popupText.gameObject.SetActive(true);
+        }
+        else if(popupText != null)
+        {
+            popupText.gameObject.SetActive(false);
+        }
+
         // Check if the door is not already opened and if the player presses the 'Enter' key
-        if (canOpen && !doorOpened && Input.GetKeyDown(KeyCode.Return))
+        if (canOpen && !DoorOpened && Input.GetKeyDown(KeyCode.Return))
         {
             otherDoor.OpenDoor();
             OpenDoor();
@@ -45,7 +55,7 @@ public class DoorController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the entering GameObject has the "Player" tag and if the door hasn't been opened yet
-        if (other.CompareTag("Player1") && !doorOpened)
+        if (other.CompareTag("Player1") && !DoorOpened)
         {
             // Prompt the player to press 'Enter' to open the door
             canOpen = true;
@@ -67,7 +77,7 @@ public class DoorController : MonoBehaviour
         doorCollider.enabled = false;
         
         // Set the flag to indicate that the door has been opened
-        doorOpened = true;
+        DoorOpened = true;
     }
 }
 

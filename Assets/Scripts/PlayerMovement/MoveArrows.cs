@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class MoveArrows : MonoBehaviour
 {
+    
     public float speed;
+    public float climbingSpeed;
     public float jump;
+    
     private float MovementX;
-
     public Rigidbody2D rb;
-    public bool isJumping;
 
+    public bool isJumping;
+    private bool isLadder;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +27,6 @@ public class MoveArrows : MonoBehaviour
     {
         // Set velocity based on input and speed
         rb.velocity = new Vector2(MovementX * speed * Time.deltaTime, rb.velocity.y);
-        
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
@@ -41,21 +43,46 @@ public class MoveArrows : MonoBehaviour
             MovementX = 0; // Stop movement when arrow keys are released
         }
 
-        if (Input.GetKeyUp(KeyCode.UpArrow) && isJumping == false) {
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !isJumping && !isLadder) 
+        {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
+            isJumping = true;
         }
+        else if(Input.GetKey(KeyCode.UpArrow) && isLadder)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, climbingSpeed * Time.deltaTime);
+        }
+        else if(Input.GetKey(KeyCode.DownArrow) && isLadder)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, climbingSpeed * Time.deltaTime * -1f);
+        }
+        else if(isLadder)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 0);
+        }
+        
         
     }
 
-        private void OnCollisionEnter2D(Collision2D other) {
+    private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Floor")) {
             isJumping = false;
         }
     }
 
-     private void OnCollisionExit2D(Collision2D other) {
-        if (other.gameObject.CompareTag("Floor")) {
-            isJumping = true;
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.CompareTag("Ladder")) {
+            rb.gravityScale = 0f;
+            isLadder = true;
+            Debug.Log("in ladder");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        if (other.gameObject.CompareTag("Ladder")) {
+            rb.gravityScale = 5f;
+            isLadder = false;
+            Debug.Log("off ladder");
         }
     }
 }

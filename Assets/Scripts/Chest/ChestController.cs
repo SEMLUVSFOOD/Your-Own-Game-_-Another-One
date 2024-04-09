@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ChestController : MonoBehaviour
-
 {
+
+    public TextMeshProUGUI popupText;
+    
     // Reference to the animator component controlling the door
     private Animator chestAnimator;
 
@@ -13,6 +16,9 @@ public class ChestController : MonoBehaviour
 
     // A flag to track whether the door has been opened
     private bool chestOpened = false;
+    private bool canOpen = false;
+
+    [SerializeField] private DoorController door;
 
     // Start is called before the first frame update
     void Start()
@@ -27,8 +33,17 @@ public class ChestController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(canOpen && DoorOpened() && !chestOpened && popupText != null)
+        {
+            popupText.gameObject.SetActive(true);
+        }
+        else if(popupText != null)
+        {
+            popupText.gameObject.SetActive(false);
+        }
+
         // Check if the door is not already opened and if the player presses the 'Enter' key
-        if (!chestOpened && Input.GetKeyDown(KeyCode.Space))
+        if (canOpen && DoorOpened() && Input.GetKeyDown(KeyCode.Space))
         {
             // Set the "OpenDoor" bool parameter to true to trigger the door opening animation
             chestAnimator.SetBool("OpenDoor", true);
@@ -38,17 +53,32 @@ public class ChestController : MonoBehaviour
             
             // Set the flag to indicate that the door has been opened
             chestOpened = true;
+            canOpen = false;
         }
     }
 
-    // Called when another Collider2D enters the trigger collider attached to this GameObject
+    private bool DoorOpened()
+    {
+        if(door == null)
+            return true;
+
+        return door.DoorOpened;
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the entering GameObject has the "Player" tag and if the door hasn't been opened yet
-        if (other.CompareTag("Player") && !chestOpened)
+        if (other.CompareTag("Player2") && !chestOpened)
         {
             // Prompt the player to press 'Enter' to open the door
+            canOpen = true;
             Debug.Log("Press 'Enter' to open the door.");
         }
     }
+
+    void OnTriggerExit2D(Collider2D other) 
+    {
+        canOpen = false;
+    }
+
 }

@@ -13,8 +13,11 @@ public class ChestScript : MonoBehaviour
     {
         if (collision.CompareTag("Player2") && collision.gameObject.name == "Player2")
         {
+            if(popupText == null)
+                return;
+
             popupText.gameObject.SetActive(true);
-              Debug.Log("Popup text shown");
+            Debug.Log("Popup text shown");
         }
     }
 
@@ -22,6 +25,9 @@ public class ChestScript : MonoBehaviour
     {
         if (collision.CompareTag("Player2") && collision.gameObject.name == "Player2")
         {
+            if(popupText == null)
+                return;
+
             popupText.gameObject.SetActive(false);
         }
     }
