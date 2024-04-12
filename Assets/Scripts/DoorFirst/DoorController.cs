@@ -44,7 +44,7 @@ public class DoorController : MonoBehaviour
         }
 
         // Check if the door is not already opened and if the player presses the 'Enter' key
-        if (canOpen && !DoorOpened && Input.GetKeyDown(KeyCode.Return))
+        if (canOpen && !DoorOpened && Input.GetKeyDown(KeyCode.Space))
         {
             otherDoor.OpenDoor();
             OpenDoor();

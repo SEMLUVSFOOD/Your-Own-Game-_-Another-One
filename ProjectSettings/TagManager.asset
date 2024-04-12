@@ -9,6 +9,8 @@ TagManager:
   - Player1
   - Player2
   - Ladder
+  - Ladder Special
+  - Ladder Dissapear
   layers:
   - Default
   - TransparentFX

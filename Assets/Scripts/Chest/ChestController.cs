@@ -43,7 +43,7 @@ public class ChestController : MonoBehaviour
         }
 
         // Check if the door is not already opened and if the player presses the 'Enter' key
-        if (canOpen && DoorOpened() && Input.GetKeyDown(KeyCode.Space))
+        if (canOpen && DoorOpened() && Input.GetKeyDown(KeyCode.Return))
         {
             // Set the "OpenDoor" bool parameter to true to trigger the door opening animation
             chestAnimator.SetBool("OpenDoor", true);
