@@ -45,7 +45,7 @@ public class MoveWASD : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W) && !isJumping && !isLadder) 
         {
-            rb.AddForce(new Vector2(rb.velocity.x, jump));
+            rb.AddForce(new Vector2(0f, jump));
             isJumping = true;
         }
         else if(Input.GetKey(KeyCode.W) && isLadder)

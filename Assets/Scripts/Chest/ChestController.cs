@@ -6,6 +6,15 @@ using TMPro;
 public class ChestController : MonoBehaviour
 {
 
+      // Reference to the GameObject with Script2 attached
+    public GameObject Player2;
+
+    // Reference to the Script2 component
+    public ChestCounter chestcounter;
+
+
+
+
     public TextMeshProUGUI popupText;
     
     // Reference to the animator component controlling the door
@@ -28,6 +37,8 @@ public class ChestController : MonoBehaviour
         
         // Get the Collider2D component attached to the door GameObject
         chestCollider = GetComponent<Collider2D>();
+        // Get the Script2 component from the GameObject
+        chestcounter = Player2.GetComponent<ChestCounter>();
     }
 
     // Update is called once per frame
@@ -54,6 +65,10 @@ public class ChestController : MonoBehaviour
             // Set the flag to indicate that the door has been opened
             chestOpened = true;
             canOpen = false;
+
+            chestcounter.UpdateUI();
+
+            
         }
     }
 
@@ -72,7 +87,6 @@ public class ChestController : MonoBehaviour
         {
             // Prompt the player to press 'Enter' to open the door
             canOpen = true;
-            Debug.Log("Press 'Enter' to open the door.");
         }
     }
 

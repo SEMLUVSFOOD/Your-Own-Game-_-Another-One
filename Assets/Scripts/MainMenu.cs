@@ -6,6 +6,6 @@ public class MainMenu : MonoBehaviour
 {
 
     public void PLayGame () {
-        SceneManager.LoadScene("SampleSceneSem");
+        SceneManager.LoadScene("LevelLayout Multiplayer");
     }
 }

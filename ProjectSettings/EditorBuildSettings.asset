@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleSceneSem.unity
     guid: 4bc72aac7a34248468c35a3d7bb062e4
+  - enabled: 1
+    path: Assets/Scenes/LevelLayout Multiplayer.unity
+    guid: dff15e266af0340d9ac08cd71a54c576
   m_configObjects: {}
