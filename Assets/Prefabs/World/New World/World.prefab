@@ -2341,6 +2341,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: One Sided Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8550407880636821579, guid: 7c0d379dc112e4cc0beb82428c787a51, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 934f9e7e56a5740029a84877ce99cc73, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6559,7 +6563,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4696026864977144227, guid: 7c0d379dc112e4cc0beb82428c787a51, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -127.5
+      value: -128
       objectReference: {fileID: 0}
     - target: {fileID: 4696026864977144227, guid: 7c0d379dc112e4cc0beb82428c787a51, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6601,6 +6605,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: One Sided Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 8550407880636821579, guid: 7c0d379dc112e4cc0beb82428c787a51, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 934f9e7e56a5740029a84877ce99cc73, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22505,6 +22513,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: One Sided Wall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8550407880636821579, guid: 7c0d379dc112e4cc0beb82428c787a51, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 934f9e7e56a5740029a84877ce99cc73, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
