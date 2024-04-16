@@ -23,7 +23,7 @@ public class ChestCounter : MonoBehaviour
     [SerializeField] private GameObject DividingLine;
 
     
-
+    
 
 
 
@@ -58,6 +58,8 @@ public class ChestCounter : MonoBehaviour
             case 2 when !executeOnce:
             executeOnce = true;
             SecondChestImage.SetActive(true);
+            VideoCamera.SetActive(true);
+            DividingLine.SetActive(false);
             inMenu = true;
             ToggleControl();
             break;
@@ -65,6 +67,8 @@ public class ChestCounter : MonoBehaviour
             case 3 when !executeOnce:
             executeOnce = true;
             ThirdChestImage.SetActive(true);
+            VideoCamera.SetActive(true);
+            DividingLine.SetActive(false);
             inMenu = true;
             ToggleControl();
             break;
@@ -72,6 +76,8 @@ public class ChestCounter : MonoBehaviour
             case 4 when !executeOnce:
             executeOnce = true;
             FourthChestImage.SetActive(true);
+            VideoCamera.SetActive(true);
+            DividingLine.SetActive(false);
             inMenu = true;
             ToggleControl();
             break;

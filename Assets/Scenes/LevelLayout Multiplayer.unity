@@ -249,8 +249,12 @@ PrefabInstance:
       value: 1750
       objectReference: {fileID: 0}
     - target: {fileID: -3742393348027161541, guid: e8f4bb87900c04d9281a4a101c50b10c, type: 3}
+      propertyPath: speed
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: -3742393348027161541, guid: e8f4bb87900c04d9281a4a101c50b10c, type: 3}
       propertyPath: climbingSpeed
-      value: 6000
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3988444245096102836, guid: e8f4bb87900c04d9281a4a101c50b10c, type: 3}
       propertyPath: m_Interpolate
@@ -502,7 +506,8 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: 
+  m_Url: file:///Users/semsannen/Documents/Semester 4 - LOCAL/Your Own Game v9/Your-Own-Game-_-Another-One/Assets/Videos/3.
+    Rights.mp4
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -832,8 +837,12 @@ PrefabInstance:
       value: 1750
       objectReference: {fileID: 0}
     - target: {fileID: -7467069588952757716, guid: fb7792b6c868d48078297da96d5d1605, type: 3}
+      propertyPath: speed
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: -7467069588952757716, guid: fb7792b6c868d48078297da96d5d1605, type: 3}
       propertyPath: climbingSpeed
-      value: 6000
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: -3480387603519427116, guid: fb7792b6c868d48078297da96d5d1605, type: 3}
       propertyPath: m_IsTrigger
@@ -1120,12 +1129,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -100
-  m_Sprite: {fileID: 21300000, guid: e138eaf3a01a0431d8fc1be500067668, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a18f5212a35b7465e98e162f1428eda4, type: 3}
+  m_Color: {r: 0.7122642, g: 0.99696416, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 37.6039, y: 24.09}
+  m_Size: {x: 40, y: 15.000001}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2206,7 +2215,8 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: 
+  m_Url: file:///Users/semsannen/Documents/Semester 4 - LOCAL/Your Own Game v9/Your-Own-Game-_-Another-One/Assets/Videos/4.
+    Abuse.mp4
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -2799,8 +2809,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -100
-  m_Sprite: {fileID: 21300000, guid: e138eaf3a01a0431d8fc1be500067668, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a18f5212a35b7465e98e162f1428eda4, type: 3}
+  m_Color: {r: 0.7137255, g: 0.99607843, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3295,7 +3305,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198510178}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 1a9e705d46c45460e8b6c06097bbd2b9, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 4473152be92c049e8ad21ddc06f0c7ae, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 142268760}
@@ -3313,7 +3323,8 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: 
+  m_Url: file:///Users/semsannen/Documents/Semester 4 - LOCAL/Your Own Game v9/Your-Own-Game-_-Another-One/Assets/Videos/2.
+    Blocked.mp4
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -4620,7 +4631,8 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: 
+  m_Url: file:///Users/semsannen/Documents/Semester 4 - LOCAL/Your Own Game v9/Your-Own-Game-_-Another-One/Assets/Videos/1.
+    e&h.mp4
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
