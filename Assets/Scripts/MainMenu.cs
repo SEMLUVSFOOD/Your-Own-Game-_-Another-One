@@ -80,7 +80,7 @@ public class MainMenu : MonoBehaviour
     }
 
     private void GoToNextScene() {
-        SceneManager.LoadScene("LevelLayout Multiplayer");
+        SceneManager.LoadScene("Final Level");
     }
 
 }
