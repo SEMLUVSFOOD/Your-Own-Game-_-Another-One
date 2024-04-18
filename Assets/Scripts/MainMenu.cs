@@ -39,16 +39,16 @@ public class MainMenu : MonoBehaviour
     
 
     public void GoToIntro () {
+        VideoIntro.SetActive(true);
         LevelSelected.SetActive(false);
         HomeMenu.SetActive(false);
         LevelSelect.SetActive(false);
-        VideoIntro.SetActive(true);
     }
 
     public void GoLevelSelect () {
         Debug.Log("clicked level select");
-        HomeMenu.SetActive(false); 
         LevelSelect.SetActive(true);
+        HomeMenu.SetActive(false); 
         LevelSelected.SetActive(false);
         PlayLevel.SetActive(false);
         GoBackToLVLSelect.SetActive(false);
@@ -60,8 +60,8 @@ public class MainMenu : MonoBehaviour
     }
 
     public void PlaySelection () {
-        LevelSelect.SetActive(false);
         LevelSelected.SetActive(true);
+        LevelSelect.SetActive(false);
     }
 
     void OnVideoFinished(VideoPlayer vp)

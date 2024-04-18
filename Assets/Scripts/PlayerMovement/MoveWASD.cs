@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class MoveWASD : MonoBehaviour
 {
@@ -12,14 +13,21 @@ public class MoveWASD : MonoBehaviour
     private float MovementX;
     public Rigidbody2D rb;
 
-    public bool isJumping;
+    public bool isGrounded;
     private bool isLadder;
+
+    Animator animator;
+    SpriteRenderer spriteRenderer; // Add this line
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         MovementX = 0;
+
+        // Get the SpriteRenderer component
+        spriteRenderer = GetComponent<SpriteRenderer>(); // Add this line
     }
 
     // Update is called once per frame
@@ -27,6 +35,16 @@ public class MoveWASD : MonoBehaviour
     {
         // Set velocity based on input and speed
         rb.velocity = new Vector2(MovementX * speed * Time.deltaTime, rb.velocity.y);
+
+        // Flip the character's sprite based on movement direction
+        if (MovementX < 0) // Moving left
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (MovementX > 0) // Moving right
+        {
+            spriteRenderer.flipX = false;
+        }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
@@ -43,10 +61,11 @@ public class MoveWASD : MonoBehaviour
             MovementX = 0; // Stop movement when arrow keys are released
         }
 
-        if (Input.GetKeyDown(KeyCode.W) && !isJumping && !isLadder) 
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded && !isLadder) 
         {
             rb.AddForce(new Vector2(0f, jump));
-            isJumping = true;
+            isGrounded = false;
+            animator.SetBool("IsJumping", !isGrounded);
         }
         else if(Input.GetKey(KeyCode.W) && isLadder)
         {
@@ -64,9 +83,15 @@ public class MoveWASD : MonoBehaviour
         
     }
 
+    private void FixedUpdate () {
+        animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
+        animator.SetFloat("yVelocity", rb.velocity.y);
+
+    }
+
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Floor")) {
-            isJumping = false;
+            isGrounded = true;
         }
     }
 
@@ -76,6 +101,9 @@ public class MoveWASD : MonoBehaviour
             isLadder = true;
             Debug.Log("in ladder");
         }
+        
+        animator.SetBool("IsJumping", !isGrounded);
+
     }
 
     private void OnTriggerExit2D(Collider2D other) {
