@@ -70,10 +70,14 @@ public class MoveWASD : MonoBehaviour
         else if(Input.GetKey(KeyCode.W) && isLadder)
         {
             rb.velocity = new Vector2(rb.velocity.x, climbingSpeed * Time.deltaTime);
+            animator.SetBool("isLadderAnimation", true);
+
         }
         else if(Input.GetKey(KeyCode.S) && isLadder)
         {
             rb.velocity = new Vector2(rb.velocity.x, climbingSpeed * Time.deltaTime * -1f);
+            animator.SetBool("isLadderAnimation", true);
+            
         }
         else if(isLadder)
         {
@@ -111,6 +115,8 @@ public class MoveWASD : MonoBehaviour
             rb.gravityScale = 5f;
             isLadder = false;
             Debug.Log("off ladder");
+            animator.SetBool("isLadderAnimation", false);
+
         }
     }
 }
