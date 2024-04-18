@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: -3480387603519427116}
   - component: {fileID: -7467069588952757716}
   - component: {fileID: 2873618784838153374}
-  - component: {fileID: 3277722876952936383}
   m_Layer: 0
   m_Name: Player1 v2
   m_TagString: Player
@@ -104,7 +103,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -173,9 +172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed774f7dc7c34c21acb9153f09d9c5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10000
-  climbingSpeed: 0
-  jump: 500
+  speed: 4000
+  climbingSpeed: 100000
+  jump: 5
   rb: {fileID: 4287308649196847255}
   isGrounded: 0
 --- !u!95 &2873618784838153374
@@ -199,38 +198,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!70 &3277722876952936383
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5529237168770668131}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.8, y: -4.65}
-  m_Size: {x: 7.95, y: 2.4}
-  m_Direction: 1

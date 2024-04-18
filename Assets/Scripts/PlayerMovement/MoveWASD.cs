@@ -65,7 +65,7 @@ public class MoveWASD : MonoBehaviour
         {
             rb.AddForce(new Vector2(0f, jump));
             isGrounded = false;
-            animator.SetBool("IsJumping", !isGrounded);
+            animator.SetBool("isJumping", !isGrounded);
         }
         else if(Input.GetKey(KeyCode.W) && isLadder)
         {
@@ -92,6 +92,7 @@ public class MoveWASD : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Floor")) {
             isGrounded = true;
+            animator.SetBool("isJumping", !isGrounded);
         }
     }
 
@@ -102,7 +103,6 @@ public class MoveWASD : MonoBehaviour
             Debug.Log("in ladder");
         }
         
-        animator.SetBool("IsJumping", !isGrounded);
 
     }
 
